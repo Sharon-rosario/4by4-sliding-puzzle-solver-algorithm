@@ -15,6 +15,7 @@ export interface Tile {
     isEmpty: boolean;
 }
 
+
 export const useBoard = (initialGridSize: number = 4) => {
     const [gridSize, setGridSize] = useState(initialGridSize);
     const [board, setBoard] = useState(() => new Board(initialGridSize));
