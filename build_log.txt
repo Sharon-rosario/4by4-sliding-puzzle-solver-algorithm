@@ -1,0 +1,37 @@
+
+> application@1.0.0 prebuild
+> rimraf dist
+
+
+> application@1.0.0 build
+> webpack --config webpack.production.config.js
+
+assets by status 453 KiB [1m[32m[cached][39m[22m 4 assets
+orphan modules 1.46 MiB [1m[33m[orphan][39m[22m 1690 modules
+runtime modules 5.41 KiB 16 modules
+built modules 1.13 MiB [1m[33m[built][39m[22m
+  modules by path [1m./node_modules/[39m[22m 1.07 MiB
+    modules by path [1m./node_modules/react-dom/[39m[22m 533 KiB 4 modules
+    modules by path [1m./node_modules/react/[39m[22m 17 KiB 2 modules
+    modules by path [1m./node_modules/scheduler/[39m[22m 10.1 KiB 2 modules
+    2 modules
+  modules by path [1m./src/[39m[22m 59.4 KiB
+    [1m./src/index.tsx + 27 modules[39m[22m 49.6 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/styles/index.css[39m[22m 39 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m [1m[31m[1 error][39m[22m
+    [1m./src/utilities/solverWorker.ts + 6 modules[39m[22m 9.8 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  modules by path [1m./static/images/[39m[22m 256 bytes
+    [1m./static/images/ sync nonrecursive \.(png|jpe?g|svg)$[39m[22m 176 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./static/images/image.png[39m[22m 80 bytes [1m[33m[optional][39m[22m [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/styles/index.css[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/styles/index.css)
+[1mModule build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at lt (C:\Users\sharon\Desktop\minecraft_puzz\node_modules\tailwindcss\dist\lib.js:38:1643)
+    at LazyResult.runOnRoot (C:\Users\sharon\Desktop\minecraft_puzz\node_modules\postcss\lib\lazy-result.js:361:16)
+    at LazyResult.runAsync (C:\Users\sharon\Desktop\minecraft_puzz\node_modules\postcss\lib\lazy-result.js:290:26)
+    at LazyResult.async (C:\Users\sharon\Desktop\minecraft_puzz\node_modules\postcss\lib\lazy-result.js:192:30)
+    at LazyResult.then (C:\Users\sharon\Desktop\minecraft_puzz\node_modules\postcss\lib\lazy-result.js:436:17)[39m[22m
+ @ ./src/styles/index.css 2:12-136 9:17-24 13:15-29
+ @ ./src/index.tsx 4:0-28
+
+webpack 5.18.0 compiled with [1m[31m1 error[39m[22m in 8332 ms
